@@ -20,6 +20,7 @@ $('#form').submit(function (e) {
         },
         beforeSend: function() {
             console.log("Перед отправкой");
+            console.log("Перед отправкой");
             console.log($("input[name=login]").val());
             console.log($("input[name=password]").val())
         }
