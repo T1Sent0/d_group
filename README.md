@@ -2,7 +2,7 @@
 
 # *ReactJs* config for Webpack
 
->##***Структура проекта***
+##>***Структура проекта***
 
     -Development
     ---Component    // Компоненты проекта
@@ -14,13 +14,13 @@
     -Prodiction
         ...         // Build проекта
 
->###***npm scripts***
+###>***npm scripts***
     for development - npm run build-dev
     for production  - npm run build-prod
 
->####***Git URL***
+####>***Git URL***
     https://github.com/T1Sent0/React_config.git
     
     
->#####***!!! Warning !!! Конфигурация будет обновляться***
+#####>***!!! Warning !!! Конфигурация будет обновляться***
     v 1.0.1
