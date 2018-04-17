@@ -1,2 +1,2 @@
-import 'normalize.css'
-import '../Development/Component/App/App'
+import 'normalize.css';
+import '../Development/Component/App/App';
