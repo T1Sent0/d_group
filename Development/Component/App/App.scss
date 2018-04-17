@@ -1,0 +1,29 @@
+body {
+  font-size: calc( (1vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+  font-family: Helvetica Neue,sans-serif;
+  letter-spacing: .1rem;
+  color: #465962;
+}
+
+.container--auth, .container--form {
+  display: flex;
+}
+
+.container--form {
+  flex-grow: 1;
+  padding: 5rem 3rem;
+  box-sizing: border-box;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  h1 {
+    margin-bottom: 4rem;
+  }
+}
+
+.background--image {
+  display: flex;
+  flex-basis: 45%;
+  height: 100vh;
+  background: url("https://test.tenderhub.ru/assets/3-3spJlRBH.jpg") no-repeat;
+}

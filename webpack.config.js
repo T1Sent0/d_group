@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMerge = require('webpack-merge');
+const devServer = require('./devserver');
 const scss = require('./webpack_conf/sass');
 const css = require('./webpack_conf/css');
 const uglifyJs = require('./webpack_conf/js.uglify');
@@ -27,17 +28,14 @@ const common = WebpackMerge([
                 template: PATHS.development + 'Template/template.html'
 
             }),
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery"
+            }),
             // new webpack.optimize.CommonsChunkPlugin({
             //     name: 'common'
             // })
         ],
-        devServer: {
-            inline: true,
-            compress: true,
-            port: 9000,
-            open: true,
-            host: 'localhost'
-        }
     },
     images(),
     es(),
@@ -56,7 +54,9 @@ module.exports = function (env) {
     if(env === 'development') {
         return WebpackMerge([
             common,
-            scss()
+            devServer(),
+            scss(),
+            es()
         ])
     }
 };
