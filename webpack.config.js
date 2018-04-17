@@ -24,6 +24,7 @@ const common = WebpackMerge([
             new HtmlWebpackPlugin({
                 title: 'React App',
                 filename: 'index.html',
+                template: PATHS.development + 'Template/template.html'
 
             }),
             // new webpack.optimize.CommonsChunkPlugin({
@@ -39,7 +40,8 @@ const common = WebpackMerge([
         }
     },
     images(),
-    es()
+    es(),
+    css()
 ]);
 
 
@@ -47,7 +49,6 @@ module.exports = function (env) {
     if(env === 'production') {
         return WebpackMerge([
             common,
-            css(),
             scss(),
             uglifyJs()
         ])
@@ -55,7 +56,6 @@ module.exports = function (env) {
     if(env === 'development') {
         return WebpackMerge([
             common,
-            css(),
             scss()
         ])
     }
