@@ -1,5 +1,6 @@
 import React from 'react';
 import './font/ProximaNova-Regular.ttf';
+import Menu from "../Menu/Menu.jsx";
 
 
 export default class App extends React.Component {
@@ -9,7 +10,7 @@ export default class App extends React.Component {
 
     render() {
         return(
-            <h1>Hello</h1>
+            <Menu/>
         )
     }
 }
