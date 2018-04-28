@@ -5,33 +5,35 @@ const WebpackMerge = require('webpack-merge');
 const devServer = require('./devserver');
 const scss = require('./webpack_conf/sass');
 const css = require('./webpack_conf/css');
+const font = require('./webpack_conf/fonts');
 const uglifyJs = require('./webpack_conf/js.uglify');
 const images = require('./webpack_conf/images');
 const es = require('./webpack_conf/es');
 
+
 const PATHS = {
-    development: path.join(__dirname, '/Development/'),
-    production: path.join(__dirname, '/Production/')
+    development: path.join(__dirname, '/Development'),
+    production: path.join(__dirname, '/Production')
 };
 
 const common = WebpackMerge([
     {
-        entry: './entry/entry.js',
+        entry: PATHS.development + '/entry/entry.js',
         output: {
-            filename: '[name].js',
             path: PATHS.production + 'js',
+            filename: 'js/[name].js'
         },
         plugins: [
             new HtmlWebpackPlugin({
                 title: 'React App',
                 filename: 'index.html',
-                template: PATHS.development + 'Template/template.html'
+                template: PATHS.development + '/Template/template.html'
 
             }),
-            new webpack.ProvidePlugin({
-                $: "jquery",
-                jQuery: "jquery"
-            }),
+            // new webpack.ProvidePlugin({
+            //     $: "jquery",
+            //     jQuery: "jquery"
+            // }),
             // new webpack.optimize.CommonsChunkPlugin({
             //     name: 'common'
             // })
@@ -39,7 +41,8 @@ const common = WebpackMerge([
     },
     images(),
     es(),
-    css()
+    css(),
+    font()
 ]);
 
 

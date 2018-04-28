@@ -4,15 +4,17 @@
 
 >***Структура проекта***
 
-    -Development
-    ---Component    // Компоненты проекта
-        ...
-    -entry
-    ---entry.js     // Точка входа в приложение
-    -webpack_conf
-        ...         // Loader's
-    -Prodiction
-        ...         // Build проекта
+    |---/Development
+    |------/Component
+    |---------/             // Component's
+    |------/entry
+    |---------/entry.js     // Entry point
+    |------/Template
+    |---------/template.html
+    |---/webpack_conf
+    |------/                // Loader's
+    |---/Prodiction
+    |------/               // Build Project
 
 >***npm scripts***
 
@@ -26,10 +28,9 @@
     
 >***!!! Warning !!! Конфигурация будет обновляться***
 
-    v 1.0.2
+    v 1.1.0
 
 >***Последние изменения***
 
-    Изменение конфигурации devserver
-    Добавление jQuery
+    Добавление loader's для шрифтов
 
