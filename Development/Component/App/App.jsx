@@ -74,7 +74,7 @@ export default class App extends React.Component {
     }
 
     render() {
-        this.deleteCookie("user");
+        // this.deleteCookie("user");
         if(this.state.cookie !== '' && this.state.loading === 'true') {
             return (
                 <Switch>

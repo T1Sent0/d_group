@@ -25,7 +25,7 @@ export default class General extends React.Component {
         let i = 0;
         let self = this;
         let arrText = ['Дизайн', 'SEO', 'SMM', 'Контекстная реклама', 'Разработка'];
-        setInterval(function () {
+        self.showTextInterval = setInterval(function () {
             if(arrText[i] !== undefined) {
                 self.changeText(arrText[i]);
                 i++;
@@ -34,6 +34,10 @@ export default class General extends React.Component {
                 }
             }
         }, 1500);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.showTextInterval)
     }
 
     render() {
