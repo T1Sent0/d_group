@@ -46,7 +46,7 @@ export default class General extends React.Component {
                 <div className='containerVideo'>
                     <video src={video} autoPlay/>
                 </div>
-                <Menu/>
+                <Menu classWrapperMenu="menuContainer" classMenu="mainMenu" menuTextItem={['Главная', 'Услуги', 'Портфолио', 'О нас', 'Контакты']} pathRoute={['/', '/service', '/portfolio', '/about_us', '/contact']}/>
                 <div className='logo'>
                     <h1>Агенство интернет маркетинга</h1>
                     <img src={logo}/>

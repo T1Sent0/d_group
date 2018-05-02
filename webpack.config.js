@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMerge = require('webpack-merge');
 const devServer = require('./devserver');
@@ -21,7 +21,7 @@ const common = WebpackMerge([
     {
         entry: PATHS.development + '/entry/entry.js',
         output: {
-            path: PATHS.production + 'js',
+            path: PATHS.production + '/js',
             filename: 'js/[name].js'
         },
         plugins: [

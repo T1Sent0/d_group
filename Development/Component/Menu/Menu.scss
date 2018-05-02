@@ -3,60 +3,65 @@
   top: 0;
   left: 0;
   z-index: 1;
-  ul {
+  .mainMenu {
     position: absolute;
     display: flex;
-  }
-  li {
-    list-style: none;
-    background: white;
-    cursor: pointer;
-    width: 7rem;
-    position: relative;
-    z-index: 1;
-    border: .1rem solid white;
-    &:not(:last-child) {
-      margin-right: 1.5rem;
-    }
-    a {
-      display: block;
-      color: black;
-      padding: .5rem;
-      box-sizing: border-box;
-      text-align: center;
-      font-size: 1rem;
-      font-family: Prox;
-      text-decoration: none;
-      &:visited {
-        color: black;
+    li {
+      list-style: none;
+      background: white;
+      cursor: pointer;
+      width: 7rem;
+      position: relative;
+      z-index: 1;
+      border: .1rem solid white;
+      &:not(:last-child) {
+        margin-right: 1.5rem;
       }
-    }
-    &:hover {
-      border: .1rem solid black;
-
       a {
-        color: #b60000;
-        font-weight: bold;
-      }
-      &::before, &::after {
-        content: '';
         display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        background: #ffffff;
-        li {
-          opacity: .5;
+        color: black;
+        padding: .5rem;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 1rem;
+        font-family: Prox;
+        text-decoration: none;
+        &:visited {
+          color: black;
         }
       }
-      &::before {
-        transform: translate(-.5rem, -.5rem);
-      }
-      &::after {
-        transform: translate(.5rem, .5rem);
+      &:hover {
+        border: .1rem solid black;
+        a {
+          color: #b60000;
+          font-weight: bold;
+        }
+        &::before, &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          z-index: -1;
+          background: #ffffff;
+          li {
+            opacity: .5;
+          }
+        }
+        &::before {
+          transform: translate(-.5rem, -.5rem);
+        }
+        &::after {
+          transform: translate(.5rem, .5rem);
+        }
       }
     }
   }
 }
+
+//<li><Link to='/'>Главная</Link></li>
+//<li><Link to='/service'>Услуги</Link></li>
+//<li><Link to='/portfolio'>Портфолио</Link></li>
+//<li><Link to='/about_us'>О нас</Link></li>
+//<li><Link to='/contact'>Контакты</Link></li>

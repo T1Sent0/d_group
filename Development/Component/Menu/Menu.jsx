@@ -8,19 +8,14 @@ export default class Menu extends React.Component {
     }
 
     render() {
-        // const menu = ['Главная', 'Услуги', 'Портфолио', 'О нас', 'Контакты'];
-        // let menuItem = menu.map((menu, index) => {
-        //     return <li key={index}><a>{menu}</a></li>
-        // });
+        let menuItem = this.props.menuTextItem.map((menu, index) => {
+            return <li key={index}><Link to={this.props.pathRoute[index]}>{this.props.menuTextItem[index]}</Link></li>
+        });
 
         return (
-            <div className='menuContainer'>
-                <ul>
-                    <li><Link to='/'>Главная</Link></li>
-                    <li><Link to='/service'>Услуги</Link></li>
-                    <li><Link to='/portfolio'>Портфолио</Link></li>
-                    <li><Link to='/about_us'>О нас</Link></li>
-                    <li><Link to='/contact'>Контакты</Link></li>
+            <div className={this.props.classWrapperMenu}>
+                <ul className={this.props.classMenu}>
+                    {menuItem}
                 </ul>
             </div>
         )

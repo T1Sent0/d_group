@@ -12,48 +12,23 @@ export default class Service extends React.Component {
     render() {
         return (
             <div className='servicePage'>
-                <Menu/>
-                <div className='containerMenuService'>
+                <Menu classWrapperMenu="menuContainer" classMenu="mainMenu" menuTextItem={['Главная', 'Услуги', 'Портфолио', 'О нас', 'Контакты']} pathRoute={['/', '/service', '/portfolio', '/about_us', '/contact']}/>
+                <div className='containerService'>
                     <ul>
                         <li>
                             Разработка
-                            <ul>
-                                <div>
-                                    <h1>Тут будет контент с кнопочкой перехода на страницу соответствующую разделу разработка</h1>
-                                </div>
-                            </ul>
                         </li>
                         <li>
                             Дизайн
-                            <ul>
-                                <div>
-                                    <h1>Тут будет контент с кнопочкой перехода на страницу соответствующую разделу Дизайн</h1>
-                                </div>
-                            </ul>
                         </li>
                         <li>
                             SEO
-                            <ul>
-                                <div>
-                                    <h1>Тут будет контент с кнопочкой перехода на страницу соответствующую разделу SEO</h1>
-                                </div>
-                            </ul>
                         </li>
                         <li>
                             SMM
-                            <ul>
-                                <div>
-                                    <h1>Тут будет контент с кнопочкой перехода на страницу соответствующую разделу SMM</h1>
-                                </div>
-                            </ul>
                         </li>
                         <li>
                             Контекстная реклама
-                            <ul>
-                                <div>
-                                    <h1>Тут будет контент с кнопочкой перехода на страницу соответствующую разделу Контекстная реклама</h1>
-                                </div>
-                            </ul>
                         </li>
                     </ul>
                 </div>

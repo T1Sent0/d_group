@@ -49,7 +49,7 @@ export default class Instruction extends React.Component {
         if (this.state.showMenu === 'true') {
             return (
                 <div className="containerInstruction">
-                    <Menu/>
+                    <Menu classWrapperMenu="menuContainer" classMenu="mainMenu" menuTextItem={['Главная', 'Услуги', 'Портфолио', 'О нас', 'Контакты']} pathRoute={['/', '/service', '/portfolio', '/about_us', '/contact']}/>
                     <div className="backgroundInstruction"/>
                     <h1 className="welcomeText">{this.state.textWelcome}</h1>
                 </div>
