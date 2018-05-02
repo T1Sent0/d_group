@@ -9,6 +9,7 @@ const font = require('./webpack_conf/fonts');
 const uglifyJs = require('./webpack_conf/js.uglify');
 const images = require('./webpack_conf/images');
 const es = require('./webpack_conf/es');
+const video = require('./webpack_conf/video');
 
 
 const PATHS = {
@@ -42,7 +43,8 @@ const common = WebpackMerge([
     images(),
     es(),
     css(),
-    font()
+    font(),
+    video()
 ]);
 
 

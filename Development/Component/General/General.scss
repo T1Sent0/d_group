@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Prox';
+  src: url('../App/font/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dewberry';
+  src: url('../App/font/Dewberry-regular.ttf') format('truetype');
+}
+
+body {
+  font-size: calc( (1vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+  background-image: radial-gradient(circle farthest-corner at center, #f1edf4 0%, #a4a4a4 100%);
+  overflow: hidden;
+}
+
+.containerVideo {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  video {
+    width: inherit;
+    height: inherit;
+    opacity: .5;
+  }
+}
+
+.welcomePage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.logo {
+  text-align: center;
+  opacity: 1;
+  z-index: 1;
+  img {
+    opacity: 1;
+    width: 18rem;
+    text-align: center;
+    z-index: 1;
+  }
+  h1 {
+    text-align: center;
+    font-family: Dewberry;
+    font-size: 3rem;
+    opacity: .7;
+    color: white;
+  }
+  h2 {
+    text-align: center;
+    font-family: Dewberry;
+    font-size: 2rem;
+    opacity: .7;
+  }
+}

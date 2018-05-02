@@ -1,0 +1,24 @@
+.containerInstruction {
+  width: inherit;
+  height: inherit;
+  background-image: radial-gradient(circle farthest-corner at center, #8c8c8c 0%, #f1edf4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  .backgroundInstruction {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("./img/bg-instruction.png") no-repeat;
+    background-size: 100%;
+    opacity: .5;
+  }
+  .welcomeText {
+    color: white;
+    font-size: 2.5rem;
+    font-family: Prox;
+    opacity: 1;
+    z-index: 2;
+  }
+}

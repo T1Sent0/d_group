@@ -1,0 +1,37 @@
+.socialLink {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2.5rem;
+  display: flex;
+  div {
+    width: 3rem;
+    height: 3rem;
+    &:not(:last-child) {
+      margin-right: 1.2rem;
+    }
+  }
+  .facebook {
+    background: url("./img/social.png") 4% 90%;
+    &:hover {
+      background: url("./img/social.png") 4% 10%;
+    }
+  }
+  .tweeter {
+    background: url("./img/social.png") 35% 90%;
+    &:hover {
+      background: url("./img/social.png") 35% 10%;
+    }
+  }
+  .vkontakte {
+    background: url("./img/social.png") 66% 90%;
+    &:hover {
+      background: url("./img/social.png") 66% 10%;
+    }
+  }
+  .youtobe {
+    background: url("./img/social.png") 96% 90%;
+    &:hover {
+      background: url("./img/social.png") 96% 10%;
+    }
+  }
+}
