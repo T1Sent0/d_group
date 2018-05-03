@@ -52,7 +52,7 @@ export default class General extends React.Component {
                     <img src={logo}/>
                     <h2>{this.state.text}</h2>
                 </div>
-                <Social/>
+                <Social socilalLink={['facebook', 'tweeter', 'vkontakte', 'youtobe']} hrefLink={['https://ru-ru.facebook.com/', 'https://twitter.com/', 'https://vk.com/description_group_public', 'https://www.youtube.com/channel/UCfsk66DgnvIkz0gGqn_YoJg/featured?view_as=subscriber']}/>
             </div>
         )
     }

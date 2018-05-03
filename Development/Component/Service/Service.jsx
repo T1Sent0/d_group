@@ -13,26 +13,8 @@ export default class Service extends React.Component {
         return (
             <div className='servicePage'>
                 <Menu classWrapperMenu="menuContainer" classMenu="mainMenu" menuTextItem={['Главная', 'Услуги', 'Портфолио', 'О нас', 'Контакты']} pathRoute={['/', '/service', '/portfolio', '/about_us', '/contact']}/>
-                <div className='containerService'>
-                    <ul>
-                        <li>
-                            Разработка
-                        </li>
-                        <li>
-                            Дизайн
-                        </li>
-                        <li>
-                            SEO
-                        </li>
-                        <li>
-                            SMM
-                        </li>
-                        <li>
-                            Контекстная реклама
-                        </li>
-                    </ul>
-                </div>
-                <Social/>
+                <Menu classWrapperMenu="containerService" classMenu="menuService" menuTextItem={['Разработка', 'Дизайн', 'SEO', 'SMM', 'Контекстная реклама']} pathRoute={['/service/development', '/service/design', '/service/seo', '/service/smm', '/service/context_advertising']}/>
+                <Social socilalLink={['facebook', 'tweeter', 'vkontakte', 'youtobe']} hrefLink={['https://ru-ru.facebook.com/', 'https://twitter.com/', 'https://vk.com/description_group_public', 'https://www.youtube.com/channel/UCfsk66DgnvIkz0gGqn_YoJg/featured?view_as=subscriber']}/>
             </div>
         )
     }

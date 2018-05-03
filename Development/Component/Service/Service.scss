@@ -4,16 +4,29 @@
   width: inherit;
   height: inherit;
   .containerService {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100vh;
+    background: rgba(25, 25, 25, 0.53);
     ul {
-      background: rgba(25, 25, 25, 0.82);
-      padding: 2rem;
       position: relative;
+      padding: 0;
+      margin: auto;
       li {
         list-style: none;
         color: white;
         font-size: 1.2rem;
         padding: 1rem;
         cursor: pointer;
+        transition: all .5s;
+        &:hover {
+          background: #474747;
+          transition: all .5s;
+          a {
+            border-bottom: .1rem solid #b60000;
+          }
+        }
         &:not(:last-child) {
           margin-bottom: 1rem;
         }
@@ -25,6 +38,10 @@
         }
       }
       a {
+        border-bottom: .1rem solid rgba(140, 140, 140, 0);
+        color: white;
+        text-decoration: none;
+        font-family: Prox;
         &:visited {
           color: white;
         }

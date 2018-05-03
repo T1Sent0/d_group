@@ -7,12 +7,14 @@ export default class Social extends React.Component {
     }
 
     render() {
+        let socialLink = this.props.socilalLink.map((link, index) => {
+            return <div key={index} className={this.props.socilalLink[index]}><a href={this.props.hrefLink[index]}/></div>
+        });
+
+
         return (
-            <div className='socialLink'>
-                <div className='facebook'/>
-                <div className='tweeter'/>
-                <div className='vkontakte'/>
-                <div className='youtobe'/>
+            <div className='containerSocialLink'>
+                {socialLink}
             </div>
         )
     }
