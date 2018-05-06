@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Social.scss';
 
-export default class Social extends React.Component {
+export default class Social extends Component {
     constructor(props){
         super(props);
+        this.socilalLink = this.props.socilalLink;
+        this.hrefLink = this.props.hrefLink;
     }
 
     render() {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../App/font/ProximaNova-Regular.ttf';
 import Menu from "../Menu/Menu.jsx";
 import video from '../App/video/video.mp4';
@@ -8,7 +8,7 @@ import Social from "../Social/Social.jsx";
 
 
 
-export default class General extends React.Component {
+export default class General extends Component {
     constructor(props){
         super(props);
         this.state = {text: 'Разработка', cookie: ''};
@@ -24,12 +24,12 @@ export default class General extends React.Component {
     componentWillMount () {
         let i = 0;
         let self = this;
-        let arrText = ['Дизайн', 'SEO', 'SMM', 'Контекстная реклама', 'Разработка'];
+        let arrText = ['Дизайн', 'SEO', 'SMM', 'Копиррайтинг', 'Контекстная реклама', 'Разработка'];
         self.showTextInterval = setInterval(function () {
             if(arrText[i] !== undefined) {
                 self.changeText(arrText[i]);
                 i++;
-                if(i === 5) {
+                if(i === 6) {
                     i = 0
                 }
             }

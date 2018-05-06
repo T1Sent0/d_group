@@ -1,9 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Loading.scss'
-import General from "../General/General.jsx";
-import Instruction from "../Instruction/Instruction.jsx";
 
-export default class Loading extends React.Component {
+export default class Loading extends Component {
     constructor(props){
         super(props);
     }
@@ -11,9 +9,12 @@ export default class Loading extends React.Component {
 
 
     render() {
-
         return (
-            <h1></h1>
+            <div className="loader">
+                <div className="inner one"/>
+                <div className="inner two"/>
+                <div className="inner three"/>
+            </div>
         )
 
     }

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Instruction.scss';
 import General from "../General/General.jsx";
 import Menu from "../Menu/Menu.jsx";
 import Service from "../Service/Service.jsx";
 import { Switch, Route } from 'react-router-dom'
 
-export default class Instruction extends React.Component {
+export default class Instruction extends Component {
     constructor(props){
         super(props);
         this.state = {textWelcome: 'Приветствуем Вас !', showMenu: ''};

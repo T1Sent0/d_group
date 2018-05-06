@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import General from "../General/General.jsx";
-import Loading from "../Loading/Loading.jsx";
 import { Switch, Route } from 'react-router-dom'
 import Instruction from "../Instruction/Instruction.jsx";
 import Service from "../Service/Service.jsx";
+import Loading from "../Loading/Loading.jsx";
 
 
-export default class App extends React.Component {
+export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {loading: '', cookie: ''};
@@ -89,11 +89,7 @@ export default class App extends React.Component {
         }
 
         return(
-        <div className="loader">
-            <div className="inner one"/>
-            <div className="inner two"/>
-            <div className="inner three"/>
-        </div>
+            <Loading/>
         )
     }
 }
