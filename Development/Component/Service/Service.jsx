@@ -10,7 +10,13 @@ export default class Service extends Component {
     constructor(props){
         super(props);
     }
-
+    //
+    /*
+    *
+    *
+    *
+    *
+    * */
     render() {
         const params = {
             direction: 'vertical',
